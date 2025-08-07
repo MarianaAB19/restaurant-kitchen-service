@@ -43,6 +43,8 @@ class Dish(models.Model):
 
     class Meta:
         ordering = ("name", )
+        verbose_name = "dish"
+        verbose_name_plural = "dishes"
 
     def __str__(self):
         return f"{self.name} - {self.price} ₴"
