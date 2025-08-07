@@ -1,3 +1,7 @@
 from django.contrib import admin
+from catalog.models import DishType
 
-# Register your models here.
+
+@admin.register(DishType)
+class DishTypeAdmin(admin.ModelAdmin):
+    search_fields = ["name", ]
